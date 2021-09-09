@@ -15,6 +15,7 @@ spec:
   rules:
   - host: "remoteapp.msawan.com"
   - host: "sub.remoteapp.msawan.com"
+  - host: "mohsin.remoteapp.msawan.com"
     http:
       paths:
       - pathType: Prefix
