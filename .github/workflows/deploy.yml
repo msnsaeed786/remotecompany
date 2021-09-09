@@ -29,7 +29,10 @@ jobs:
 
     - name: Deploy Certificate Issuer to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/deploy/cert-issuer.yml
-      
+
+    - name: Enable Pod to Pod Communication to DigitalOcean Kubernetes
+      run: kubectl apply -f $GITHUB_WORKSPACE/deploy/pod_to_pod.yml
+    
     - name: Deploy Ingress to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/deploy/ingress.yml
       
