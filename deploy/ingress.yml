@@ -10,6 +10,7 @@ spec:
   - hosts:
     - remoteapp.msawan.com
     - sub.remoteapp.msawan.com
+    - mohsin.remoteapp.msawan.com    
     secretName: hello-kubernetes-tls
   rules:
   - host: "remoteapp.msawan.com"
