@@ -39,7 +39,7 @@ metadata:
 #    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "55db8c92-be68-4388-ba86-c18339da5847"
 #    service.beta.kubernetes.io/do-loadbalancer-redirect-http-to-https: "true"
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: http
       protocol: TCP
