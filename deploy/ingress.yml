@@ -8,14 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - remoteapp.msawan.com
-    - sub.remoteapp.msawan.com
-    - mohsin.remoteapp.msawan.com    
+    - remoteapp.msawan.com   
     secretName: hello-kubernetes-tls
   rules:
   - host: "remoteapp.msawan.com"
-  - host: "sub.remoteapp.msawan.com"
-  - host: "mohsin.remoteapp.msawan.com"
     http:
       paths:
       - pathType: Prefix
