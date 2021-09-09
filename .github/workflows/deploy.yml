@@ -1,9 +1,10 @@
 name: Deployment on Kubernetes
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_run:
+    workflows: ["Docker_Image_CI"]
+    branches: [main]
+    types: 
+      - completed
 
 jobs:
 
