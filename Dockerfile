@@ -1,4 +1,5 @@
-FROM golang:onbuild
+#FROM golang:onbuild
+FROM golang:alpine3.13
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
