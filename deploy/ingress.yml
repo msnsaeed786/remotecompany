@@ -12,6 +12,7 @@ spec:
     secretName: hello-kubernetes-tls
   rules:
   - host: "remoteapp.msawan.com"
+  - host: "sub.remoteapp.msawan.com"
     http:
       paths:
       - pathType: Prefix
