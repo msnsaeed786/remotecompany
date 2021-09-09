@@ -24,6 +24,12 @@ jobs:
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ secrets.DIGITALOCEAN_CLUSTER_ID }}
 
+    - name: Deploy Cert-Manager to DigitalOcean Kubernetes
+      run: kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.16.1/cert-manager.yaml
+
+    - name: Deploy Certificate Issuer to DigitalOcean Kubernetes
+      run: kubectl apply -f $GITHUB_WORKSPACE/deploy/cert-issuer.yml
+      
     - name: Deploy Ingress to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/deploy/ingress.yml
       
