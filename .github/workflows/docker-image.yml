@@ -23,5 +23,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag mohsindocker786/remotecompany:latest
     - name: Docker push
-      run: docker push ${{}secrets.DOCKER_USER}}/remotecompany
+      run: docker push ${{secrets.DOCKER_USER}}/remotecompany
       
