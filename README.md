@@ -7,7 +7,7 @@ https://gist.github.com/nklmilojevic/4a1de3c3e31d0ea2d4f31cd54211613d
 This is a Golang app that returns the values that you pass in the URL path.
 
 
-### CI / CD
+## CI / CD
 
 Github Action is being used as CI. When a user pushes the code changes to the repo, It triggers the Action to Build and Push the Image to the Dockerhub.
 Actions contain 3 WorkFlows
