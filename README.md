@@ -14,17 +14,21 @@ Actions Contain 3 WorkFlows
 ![image](https://user-images.githubusercontent.com/89794883/132804517-dd03f404-6e48-4987-890e-0e4df91d505f.png)
 
 ## Kubernetes Objects 
+
 We have 4 kuberenets Objects in this repository
-- **cert-issuer.yml**: This is a ClusterIssuer
+- **cert-issuer.yml**: This is a ClusterIssuer Object is cert-manager which is a Kubernetes add-on that provisions TLS certificates from Let’s Encrypt and other certificate authorities (CAs) and manages their lifecycles.
+- **pod_to_pod.yml**: To provisions certificates from Let’s Encrypt. Cert-manager first performs a self-check to ensure that Let’s Encrypt can reach the cert-manager Pod that validates your domain. For this check to pass on, We have to enable Pod-Pod communication through the Nginx Ingress load balancer.
+- **ingress.yml**: Here we have specified that we’d like to create an Ingress Resource called echo-ingress, and route traffic based on the Host header. An HTTP request Host header specifies the domain name of the target server.
+- **deployment.yml**: In this file, we have define a Service called remote-app-service which routes traffic to Pods with the app: remote-app label selector. It accepts TCP traffic on port 80 and routes it to port 8080. We then define a Deployment, also called remote-app, which manages Pods with the app: remote-app Label Selector. We specify that the Deployment should have 3 Pod replicas, and that the Pods should start a container called remote-app running the image that we pushed to Dockerhub. Finally, we open port 8080 on the Pod container.
 
+## Making Changes to Your App
 
+To make changes to the Go App you can clone the repository and make changes to it and then push the changes to the repository. The Push will trigger the a Github action which will build a new Docker Image and Push it to the Dockerhub repository. Once this workflow is completed it will trigger the next workflow that will deploy the updated image to the Kubernetes cluster. 
 
+## Add or remove Domain / Sub domain to the App
 
+To add or remove a Domain or Sub Domain you can make changes to the ingress.yml file. You can add or remove the required in the hosts section under spec. You can checkout the below Snap for refernce. 
 
-### Making Changes to Your App
+![image](https://user-images.githubusercontent.com/89794883/132808287-8bb8ab33-455d-46be-85a2-a578bedc8161.png)
 
-### Learn More
-
-
-## Deleting the App
 
