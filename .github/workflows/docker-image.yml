@@ -3,9 +3,12 @@ name: Docker_Image_CI
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '**/README.md'
   pull_request:
     branches: [ main ]
-
+    paths-ignore:
+      - '**/README.md'
 jobs:
 
   publish_docker_image:
