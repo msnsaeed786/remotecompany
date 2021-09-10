@@ -1,5 +1,5 @@
 ## Assignment
-https://gist.github.com/nklmilojevic/4a1de3c3e31d0ea2d4f31cd54211613d.js
+https://gist.github.com/nklmilojevic/4a1de3c3e31d0ea2d4f31cd54211613d
 
 
 ## Getting Started
