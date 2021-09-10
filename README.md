@@ -1,3 +1,7 @@
+## Assignment
+https://gist.github.com/nklmilojevic/4a1de3c3e31d0ea2d4f31cd54211613d.js
+
+
 ## Getting Started
 
 This is a Golang app that returns the values that you pass the path in the URL.
@@ -25,10 +29,11 @@ We have 4 Kubernetes Objects in this repository
 
 To make changes to the Go App you can clone the repository and make changes to it and then push the changes to the repository. The Push will trigger a Github action which will build a new Docker Image and Push it to the Dockerhub repository. Once this workflow is completed it will trigger the next workflow that will deploy the updated image to the Kubernetes cluster. 
 
-## Add or remove Domain / Subdomain to the App
+## Add or Remove Domain / Subdomain to the App
 
 To add or remove a Domain or Sub Domain you can make changes to the ingress.yml file. You can add or remove the required in the hosts' section under spec. You can check out the below Snap for reference. 
 
 ![image](https://user-images.githubusercontent.com/89794883/132808287-8bb8ab33-455d-46be-85a2-a578bedc8161.png)
+
 
 
